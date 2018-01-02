@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>snow7yue</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+	<link rel = "Shortcut Icon" href="./images/icon/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+	<style type="text/css">
+		.container{
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button class="btn btn-primary" data-toggle="modal" data-target="#mydialog">点我</button>
+		<div class="modal fade" id="mydialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header"></div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button class="btn btn-success" data-dismiss="modal">modal关闭</button>
+					</div>
+				</div>
+			</div>	
+		</div><br><hr>
+
+		<!-- js弹出 -->
+		<button class="btn btn-primary showDialog" data-toggle="modal">点我</button>
+		<div class="modal fade" id="mydialog2">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header"></div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button class="btn btn-success closeDialog">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div><br><hr>
+
+		<!-- js事件 -->
+		<button class="btn btn-primary" data-toggle="modal" data-target="#mydialog3">点我</button>
+		<div class="modal fade" id="mydialog3">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header"></div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button class="btn btn-success" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div><br><hr>
+
+	</div>
+
+
+	<script type="text/javascript">
+		//js点击控制弹窗 打开和关闭
+		$('.showDialog').click(function () {
+			$('#mydialog2').modal('show');
+		});
+
+		$('.closeDialog').click(function () {
+			$('#mydialog2').modal('hide');
+		});
+
+		//利用进行前后的时间点来控制背景颜色
+		$('#mydialog3').on('show.bs.modal', function () {
+			$('body').css({'background' : '#FF0'});
+		})
+		$('#mydialog3').on('shown.bs.modal', function () {
+			$('body').css({'background' : '#F00'});
+		})
+
+		$('#mydialog3').on('hide.bs.modal', function () {
+			$('body').css({'background' : '#000'});
+		})
+		$('#mydialog3').on('hidden.bs.modal', function () {
+			$('body').css({'background' : '#FFF'});
+		})
+
+	</script>
+</body>
+</html>

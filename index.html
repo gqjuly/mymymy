@@ -5,42 +5,43 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  <!-- 移动端user-scalable=no 可以禁用其缩放功能 -->
 	<meta charset="utf-8">
 	<link rel = "Shortcut Icon" href="./images/icon/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<style type="text/css">
+		body{
+			background: #E1A679;
+			font-family: 微软雅黑;
+			padding: 25px;
+		}
+		.musicA{
+			float: right;
+		}
+		
+	</style>
 
 </head>
 <body>	
-	<div class="container-fluid">
-		<p class="welcomeh4">Welcome to here</p>
-		<div class="row">
-			<div class="col-md-1"></div>
-
-			<div class="col-md-2">
-				<a class="dropdown btn ">
-				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The only menu&nbsp&nbsp<span class="caret"></span></a>
-				          <ul class="dropdown-menu">
-				            <li><a href="#">照片</a></li>
-				            <li><a href="#">音乐</a></li>
-				            <li><a href="#">书籍</a></li>
-				            <li><a href="#">视频</a></li>
-				            <li role="separator" class="divider"></li>
-				            <li><a href="./item/demo/index.html">demo</a></li>
-				            <li><a href="" target="_blank">none</a></li>
-				            <li role="separator" class="divider"></li>
-				            <li><a href="./item/aboutmyself/index.html" target="_blank">About myself</a></li>
-				          </ul>
-				</a>
-			</div>
-
-			<div class="col-md-8">
-				<div class="musicA">
-					<embed src="./images/music/snow.mp3" width=300 height=60 type=audio/mpeg loop="-1" autostart="false" volume="0"></embed>
-				</div>
-			</div>
-
+	<div class="">
+		<h2>Welcome to here. Give you a song!</h2>
+		<p>There are only two choices here, sorry. How do you choose to go to the same place.</p>
+		<a href="./item/bootstrap/index.html">no listen to look</a>
+		<br>
+		<a href="#">listen to look</a>
+		
+		<div class="musicA">
+			<embed src="./images/music/snow.mp3" height="60px"  type=audio/mpeg loop="-1" autostart="false" volume="0"></embed>
 		</div>
+			
 	</div>
+
+	<script type="text/javascript">
+		// 直接用a标签中的href属性可以替代原页面上直接跳转功能
+		// $('a').eq(0).click(function () {
+		// 	window.location.href="./item/bootstrap/index.html";
+		// })
+		$('a').eq(1).click(function () {
+			window.open('./item/bootstrap/index.html');
+		})
+	</script>
 </body>
 </html>
