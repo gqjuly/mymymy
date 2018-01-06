@@ -85,7 +85,7 @@
 				<li role="presentation" class="active item"><a href="#">haha</a></li>
 				<li role="presentation" class="item"><a href="#">hehe</a></li>
 				<li role="presentation" class="item"><a href="#" >xixi</a></li>
-			</ul>
+			</ul>     
 
 
 		</div>
@@ -103,7 +103,7 @@
 	<script type="text/javascript">
 		$('.item').mouseenter(function(){
 			$(this).addClass('active');
-			$('.item').not($('this')).removeClass('active');
+			$('.item').not($(this)).removeClass('active');
 
 			idx = $(this).index('.item');
 			$('.navt').eq(idx).show();
