@@ -2,46 +2,92 @@
 <html>
 <head>
 	<title>snow7yue</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  <!-- 移动端user-scalable=no 可以禁用其缩放功能 -->
-	<meta charset="utf-8">
 	<link rel = "Shortcut Icon" href="./images/icon/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<script type="text/javascript" src="./js/jquery.js"></script>
 	<style type="text/css">
 		body{
-			background: #E1A679;
-			font-family: 微软雅黑;
 			padding: 25px;
+			margin-left: 250px;
+			margin-right: 250px;
 		}
-		.musicA{
-			float: right;
+		a{
+			margin-right: 10px;
 		}
-		
-	</style>
+		button{
+			margin: 5px;
+			padding: 5px;
+		}
+		#demo,#my{
+			display: none;
+			position: absolute;
+			top: 115px;
+			left: 360px;
 
+		}
+		#menu{
+			height: auto;
+			width: auto;
+			background: #f0f0f0;
+		}
+	
+	</style>
 </head>
-<body>	
-	<div class="">
-		<h2>Welcome to here. Give you a song!</h2>
-		<p>There are only two choices here, sorry. How do you choose to go to the same place.</p>
-		<a href="./item/bootstrap/index.html">no listen to look</a>
-		<br>
-		<a href="#">listen to look</a>
+
+<body>
+	<div>
 		
-		<div class="musicA">
-			<embed src="./images/music/snow.mp3" height="60px"  type=audio/mpeg loop="-1" autostart="false" volume="0"></embed>
-		</div>
-			
+	</div>
+	<h2>首页</h2>
+	<hr>
+	<div id="menu">
+		<div><button onclick="demoClick()">DEMO</button></div>
+		<div><button onclick="myClick()">MY</button></div>
+	</div>
+	
+	<div id="demo">
+		<a href="./item/bootstrap/index.html">Bootstrap</a>
+		<a href="./item/JQueryUI/index.html">jquery插件库</a>
+		<a href="./item/effects/01/index.html">特效</a>
+		<a href="./item/music/index.html">来首歌吧</a>
 	</div>
 
+	<div id="my">
+		<a href="./item/knowledge/index.html">学习博客</a>
+		<a href="./item/aboutmyself/index.html">关于我</a>
+	</div>
+	
+	
+
 	<script type="text/javascript">
-		// 直接用a标签中的href属性可以替代原页面上直接跳转功能
-		// $('a').eq(0).click(function () {
-		// 	window.location.href="./item/bootstrap/index.html";
-		// })
-		$('a').eq(1).click(function () {
-			window.open('./item/bootstrap/index.html');
-		})
+		demoObj = document.getElementById('demo');
+		myObj = document.getElementById('my');	
+		function demoClick() {
+		
+		if (demoObj.style.display=='inline') {
+			demoObj.style.display= 'none';
+		}else{
+			demoObj.style.display= 'inline';
+		}
+		myObj.style.display= 'none'
+
+
+		;
+		};
+
+		function myClick() {
+		
+		if (myObj.style.display=='inline') {
+			myObj.style.display= 'none';
+		}else{
+			myObj.style.display= 'inline';
+		}
+
+		demoObj.style.display= 'none';
+		};
+
 	</script>
+	
+	
+	
+
 </body>
 </html>

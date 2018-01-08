@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>snow7yue</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  <!-- 移动端user-scalable=no 可以禁用其缩放功能 -->
+	<meta charset="utf-8">
+	<link rel = "Shortcut Icon" href="./images/icon/favicon.ico">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<style type="text/css">
+		body{
+			background: green;
+			font-family: 微软雅黑;
+			padding: 25px;
+			color: white;
+		}
+		h2{
+
+		}
+		.musicA{
+			
+			margin-right: 50px;
+			background: black;
+			height: 130px;
+			width: 400px;
+		}
+		
+	</style>
+
+</head>
+<body>	
+	<div class="">
+		<h2>Welcome to here. Give you a song!</h2>
+
+		<div class="musicA">
+			<embed src="./images/music/snow.mp3" style="margin: 50px;" height="60px"  type=audio/mpeg loop="-1" autostart="false" volume="0"></embed>
+		</div>
+		
+		<a href="#">no listen to look</a>
+		<br>
+		<a href="#">listen to look</a>
+		
+		
+			
+	</div>
+
+	<script type="text/javascript">
+		// 直接用a标签中的href属性可以替代原页面上直接跳转功能 在此界面上跳转
+		$('a').eq(0).click(function () {
+			window.location.href="./item/bootstrap/index.html";
+		})
+		//新开一个界面
+		$('a').eq(1).click(function () {
+			window.open('./item/bootstrap/index.html');
+		})
+	</script>
+</body>
+</html>
