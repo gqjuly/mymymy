@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学习CSS3</title>
+	<style type="text/css">
+		body{
+			padding-left: 250px;
+		}
+		.threads{
+			width: 100px;
+			margin-top: 10px;
+			border: 2px solid #000;
+			border-radius: 10px;  /* 2em = 25px */
+		}
+		.threads1{
+			width: 100px;
+			margin-top: 10px;
+			border: 2px solid #f00;
+			box-shadow: 10px 10px 5px #888; /* 第一个左右偏移量  第一个上下偏移量  第三阴影强度 第四个阴影颜色*/
+		}
+		/* 失败 */
+		.threads2{
+			width: 100px;
+			margin-top: 10px;
+			-webkit-border-image:url('./images/border.png') 30 30 round; /* Safari 5 and older */
+			-o-border-image:url('./images/border.png') 30 30 round; /* Opera */
+			border-image: url('./images/border.png') 30 30 round;
+
+		}
+		.threads3{
+			width: 100px;
+			margin-top: 10px;
+			
+		}
+		.threads4{
+			width: 100px;
+			margin-top: 10px;
+			padding: 50px;
+			/*我要背景颜色变圆角*/
+			border-radius: 25px;
+			background-color: #FF0000;
+			
+			
+		}
+		.threads5{
+			width: 100px;
+			margin-top: 10px;
+			padding: 50px;
+			/*我要边框变圆角*/
+			border: 2px solid #ff0000;
+			border-radius: 25px;
+			
+		}
+		.threads6{
+			width: 100px;
+			margin-top: 10px;
+			padding: 50px;
+			/*我要背景图片变圆角*/
+			background-image: url('./images/bg.png');
+			border-radius: 25px;
+		}
+
+		/* 
+		border-top-left-radius	定义了左上角的弧度
+		border-top-right-radius	定义了右上角的弧度
+		border-bottom-right-radius	定义了右下角的弧度
+		border-bottom-left-radius	定义了左下角的弧度
+		
+		四个值: 第一个值为左上角，第二个值为右上角，第三个值为右下角，第四个值为左下角。 
+		三个值: 第一个值为左上角, 第二个值为右上角和左下角，第三个值为右下角
+		两个值: 第一个值为左上角与右下角，第二个值为右上角与左下角
+		一个值： 四个圆角值相同
+		*/
+		.threads7{
+			width: 100px;
+			margin-top: 10px;
+			padding: 50px;
+			/*四个角的弧度不一样*/
+			border-radius: 25px 35px 20px 5px;
+			background-color: #FF0000;
+		}
+
+		/*椭圆的干活*/
+		.threads8{
+			width: 100px;
+			margin-top: 10px;
+			padding: 50px;
+			/*四个角的弧度不一样*/
+			border-radius: 50%;
+			background-color: #FF0000;
+		}
+
+		.threads9{
+			width: 100px;
+			margin-top: 10px;
+			padding: 50px;
+			/*我们不一样*/
+			border-radius: 50px/150px;
+			background-color: #FF0000;
+		}
+	</style>
+</head>
+<body>
+	<h2>css3边框</h2>
+	<div class="threads">我要加圆角</div>
+
+	<div class="threads1">我要有盒影音</div>
+
+	<div class="threads2"> 我要图片平铺 失败了</div>
+
+	<div class="threads3">我要图片拉伸 失败了</div>
+
+	<h2>css3圆角</h2>
+	<div class="threads4">我要背景颜色变圆角 </div>
+
+	<div class="threads5">我要边框变圆角</div>
+
+	<div class="threads6">我要背景图片变圆角</div>
+
+	<div class="threads7">我要四个角的弧度不一样</div>
+
+	<div class="threads8">我要变椭圆</div>
+
+	<div class="threads9">我们不一样</div>
+
+
+</body>
+</html>
