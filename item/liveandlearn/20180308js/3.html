@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS数组类型的三种定义方式</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<script type="text/javascript">
+		var arr1 = new Array();
+		arr1[0] = 'haha1';
+		arr1[2] = 'haha2'; //因为漏写arr1[1]导致undefined
+		arr1[3] = 'haha3';
+		arr1[4] = 'haha4';
+		document.write(arr1+"<br>");
+		for (var i = 0; i < arr1.length; i++) {
+			document.write(arr1[i]+'<br>');
+		}
+
+		//中间分割线
+		document.write('<HR style="border:3 double #987cb9; margin:50px 0px 50px 0px;" width="100%" color=#987cb9 SIZE=3>'); 
+
+		var arr1 = new Array();
+		arr1[0] = 'haha0';
+		arr1[1] = 'haha1';
+		arr1[2] = 'haha2';
+		arr1[3] = 'haha3';
+		document.write(arr1+"<br>");
+		for (var i = 0; i < arr1.length; i++) {
+			document.write(arr1[i]+'<br>');
+		}
+
+		//中间分割线
+		document.write('<HR style="border:3 double #987cb9; margin:50px 0px 50px 0px;" width="100%" color=#987cb9 SIZE=3>'); 
+
+		var arr3 = new Array("haha0", "haha1","haha2", "haha3");
+		document.write(arr3 +"<br>");
+		for (var i = 0; i < arr3.length; i++) {
+			document.write(arr3[i]+"<br>");
+		}
+
+		//中间分割线
+		document.write('<HR style="border:3 double #987cb9; margin:50px 0px 50px 0px;" width="100%" color=#987cb9 SIZE=3>'); 
+
+		var arr4 = ["haha0", "haha1","haha2", "haha3"];
+		document.write(arr4+"<br>");
+		for (var i = 0; i < arr4.length; i++) {
+			document.write(arr4[i]+"<br>");
+		}
+		
+	</script>
+
+</body>
+</html>

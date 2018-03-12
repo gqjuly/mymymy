@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>按键码</title>
+	<style type="text/css">
+	img{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	</style>
+</head>
+<body>
+<div>
+	<img src="logo.jpg" id="imgid">
+</div>
+
+<script type="text/javascript">
+obj = document.getElementById('imgid');
+xs = 0;
+xv = 10;
+
+ys = 0;
+yv = 10;
+document.onkeydown =  function (event) {
+	ky = event.keyCode;
+
+	switch(ky){
+		case 37:
+
+			xs-=xv;
+			obj.style.left = xs + "px";
+			break;
+		case 38:
+		ys -= yv;
+			obj.style.top = ys + "px";
+			break;
+		case 39:
+			// alert("1");
+			xs+=xv
+			obj.style.left = xs + "px";
+			break;
+		case 40:
+		ys += yv;
+			obj.style.top = ys + "px";
+			break;
+		default:
+			break;
+
+
+	}
+
+}
+</script>
+
+</body>
+</html>

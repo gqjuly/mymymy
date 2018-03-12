@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>三秒跳转</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<span>注册成功，<span id="sid">3</span>秒后自动跳转...</span>
+</div>
+
+<script type="text/javascript">
+	var s = 3;
+	var y = document.getElementById('sid');
+	var sta = document.getElementById('startid');
+	var sto = document.getElementById('stopid');
+
+	var timer= setInterval(function(){
+		y.innerHTML = --s;
+		if (s <= 0) {
+			location="https://www.baidu.com";
+		}
+	},1000);
+
+
+</script>
+</body>
+</html>

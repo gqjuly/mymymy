@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animaton</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			animation:  myfrist 5s;
+			-webkit-animation:  myfrist 5s;
+		}
+		.second{
+			width: 100px;
+			height: 100px;
+			background: red;
+			animation:  mysecond 5s;
+			-webkit-animation:  mysecond 5s;
+		}
+		.thirdly{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			animation:  mythirdly 5s;
+			-webkit-animation:  mythirdly 5s;
+
+		}
+		@keyframes myfrist{
+			from {
+				background: red;
+			}
+			to {
+				background: yellow;
+			}
+		}
+		@-webkit-keyframes myfrist{
+			from {
+				background: red;
+			}
+			to {
+				background: yellow;
+			}
+		}
+		/*second*/
+		@-webkit-keyframes mysecond{
+		0%	{
+				background: red;
+			}
+		25%	{
+				background: yellow;
+			}
+		25%	{
+				background: green;
+			}
+		75%	{
+				background: blue;
+			}
+		100%{
+				background: grey;
+			}
+		}
+
+		/*thirdly css中用了position属性*/
+		@-webkit-keyframes mythirdly{
+		0%	{
+				background: red; left: 0px; top: 0px;
+			}
+		25%	{
+				background: yellow; left: 200px; top: 0px;
+			}
+		50%	{
+				background: green; left: 200px; top: 200px;
+			}
+		75%	{
+				background: blue; left: 0px; top: 200px;
+			}
+		100%{
+				background: grey; left: 0px; top: 0px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div></div>
+	<div class="second"></div>
+	<div class="thirdly"></div>
+</body>
+</html>

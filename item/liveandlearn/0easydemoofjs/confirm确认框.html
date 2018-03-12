@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>确认框</title>
+</head>
+<body>
+<a href="https://www.baidu.com/" id="aid">baiduyixai</a>
+
+</body>
+<script type="text/javascript">
+l = document.getElementById("aid");
+l.onclick = function(){
+	y = confirm("您确定去百度吗？");
+	if (!y) {
+		return false;
+	}
+}
+
+</script>
+</html>

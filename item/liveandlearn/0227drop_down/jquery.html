@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>drop_down</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav{
+			height: 40px;
+			width: 500px;
+			background-color: grey;
+			margin: 20px;
+		}
+		ul{
+			list-style: none;
+		}
+		ul li{
+			float: left;
+			/*width: 80px;*/ 
+			line-height: 40px;
+			text-align: center;
+			position: relative;
+		}
+		a{
+			text-decoration: none;
+			color: #0ff;
+			display: block;
+			padding: 0 10px;
+		}
+		a:hover{
+			color: #000;
+			background: #0f0;
+		}
+		ul li ul li{
+			float: none;
+		}
+		ul li ul{
+			position: absolute;
+			top: 40px;
+			left: 0px;
+			display: none;
+
+		}
+		ul li ul li a{
+			color: black;
+			
+		}
+		/*ul li:hover ul{
+			display: block;
+		}*/
+	</style>
+</head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".navmenu").mouseover(function(){
+			$(this).children('ul').show();
+		});
+		$('.navmenu').mouseout(function(){
+			$(this).children('ul').hide();
+		})
+	})
+	
+</script>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="#" >首页</a></li>
+			<li class="navmenu"><a href="#" >收藏</a>
+				<ul>
+					<li><a href="#" >japan</a></li>
+					<li><a href="#" >china</a></li>
+					<li><a href="#" >korea</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >爱好</a></li>
+			<li><a href="#" >我的</a></li>
+			<li><a href="#" >服务</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>

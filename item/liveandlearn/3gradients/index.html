@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gradients</title>
+	<style type="text/css">
+	div, h2{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	.gradients1{
+		height: 200px;
+		background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+		background: linear-gradient(red,blue); /* 标准的语法（必须放在最后） */
+	}
+
+	.gradients2{
+		height: 200px;
+		background: -webkit-linear-gradient(right, red, blue);
+	    background: -o-linear-gradient(right, red, blue); 
+	    background: -moz-linear-gradient(right, red, blue); 
+		background: linear-gradient(to right, red,blue); /* 加了 to right */
+	}
+
+	.gradients3{
+		height: 200px;
+		background: -webkit-linear-gradient(bottom right, red, blue);
+	    background: -o-linear-gradient(bottom right, red, blue); 
+	    background: -moz-linear-gradient(bottom right, red, blue); 
+		background: linear-gradient(to bottom right, red,blue); /* 加了 to right */
+	}
+
+	/* 以下7个从菜鸟复制过来 看一下就懂了*/
+	#grad1 {
+	    height: 100px;
+	    background: -webkit-linear-gradient(0deg, red, blue); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(0deg, red, blue); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(0deg, red, blue); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(0deg, red, blue); /* 标准的语法（必须放在最后） */
+	}
+
+	#grad2 {
+	    height: 100px;
+	    background: -webkit-linear-gradient(90deg, red, blue); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(90deg, red, blue); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(90deg, red, blue); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(90deg, red, blue); /* 标准的语法（必须放在最后） */
+	}
+
+	#grad3 {
+	    height: 100px;
+	    background: -webkit-linear-gradient(180deg, red, blue); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(180deg, red, blue); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(180deg, red, blue); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(180deg, red, blue); /* 标准的语法（必须放在最后） */
+	}
+
+	#grad4 {
+	    height: 100px;
+	    background: -webkit-linear-gradient(-90deg, red, blue); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(-90deg, red, blue); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(-90deg, red, blue); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(-90deg, red, blue); /* 标准的语法（必须放在最后） */
+	}
+
+	#grad5 {
+	    height: 200px;
+	    background: -webkit-linear-gradient(red, green, blue); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(red, green, blue); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(red, green, blue); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(red, green, blue); /* 标准的语法（必须放在最后） */
+	}
+
+	#grad6 {
+	    height: 200px;
+	    background: -webkit-linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* 标准的语法（必须放在最后） */
+	}
+
+	#grad7 {
+	    height: 200px;
+	    background: -webkit-linear-gradient(red 10%, green 85%, blue 90%); /* Safari 5.1 - 6.0 */
+	    background: -o-linear-gradient(red 10%, green 85%, blue 90%); /* Opera 11.1 - 12.0 */
+	    background: -moz-linear-gradient(red 10%, green 85%, blue 90%); /* Firefox 3.6 - 15 */
+	    background: linear-gradient(red 10%, green 85%, blue 90%); /* 标准的语法（必须放在最后） */
+	}
+
+	</style>
+</head>
+<body>
+	<h2>正常渐变</h2>
+	<div class="gradients1"></div>
+	<br>
+	<br>
+	<br>
+	<hr>
+
+	<h2>左右渐变</h2>
+	<div class="gradients2"></div>
+	<br>
+	<br>
+	<br>
+	<hr>
+
+	<h2>对角渐变</h2>
+	<div class="gradients3"></div>
+	<br>
+	<br>
+	<br>
+	<hr>
+
+	<h2>线性渐变 - 使用不同的角度</h2>
+	<div id="grad1" style="color:white;text-align:center;">0deg</div><br>
+	<div id="grad2" style="color:white;text-align:center;">90deg</div><br>
+	<div id="grad3" style="color:white;text-align:center;">180deg</div><br>
+	<div id="grad4" style="color:white;text-align:center;">-90deg</div>
+	<br>
+	<br>
+	<br>
+	<hr>
+
+	<h2>3 个颜色结点（均匀分布）</h2>
+	<div id="grad5"></div>
+	<h2>7 个颜色结点（均匀分布）</h2>
+	<div id="grad6"></div>
+	<h2>3 个颜色结点（不均匀分布）</h2>
+	<div id="grad7"></div>
+	<br>
+	<br>
+	<br>
+	<hr>
+
+</body>
+</html>

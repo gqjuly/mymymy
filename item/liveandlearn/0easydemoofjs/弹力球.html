@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>弹力球</title>
+	<style type="text/css">
+		img{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+	</style>
+</head>
+<body>
+<div>
+	<img src="ball.jpg" id="ballid">
+</div>
+
+
+<script type="text/javascript">
+	imgballobj = document.getElementById('ballid');
+	//获取可视屏幕的高度
+	screeHeight = document.documentElement.clientHeight;  
+	imgHeight = 207;
+	diffHeight = screeHeight - imgHeight;
+	//获取可视屏幕的宽度
+	screeWidth = document.documentElement.clientWidth;  
+	imgWidth = 206;
+	diffWidth = screeWidth - imgWidth;
+
+	//y轴路程与速度 上下
+	ys = 0;
+	yv = 10;
+	//x轴路程与速度 左右
+	xs = 0;
+	xv = 10; //跟换速度就能改变弹射角度
+	setInterval(function () {
+		ys += yv;
+		if (ys >= diffHeight) {
+			ys = diffHeight;
+			yv = -yv;
+		}
+		if (ys < 0) {
+			yv = -yv;
+		}
+		imgballobj.style.top = ys + "px";
+
+		xs += xv;
+		if (xs >= diffWidth) {
+			xs = diffWidth;
+			xv = -xv;
+		}
+		if (xs < 0) {
+			xv = -xv;
+		}
+		imgballobj.style.left = xs + "px";
+	} ,10);
+
+
+</script>
+</body>
+</html>

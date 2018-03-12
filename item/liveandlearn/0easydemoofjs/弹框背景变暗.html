@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<script>
+	function show()  //显示隐藏层和弹出层
+	{
+	   var hideobj=document.getElementById("hidebg");
+	   hidebg.style.display="block";  //显示隐藏层
+	   // hidebg.style.height=document.body.clientHeight+"px";  //设置隐藏层的高度为当前页面高度
+	   document.getElementById("hidebox").style.display="block";  //显示弹出层
+	}
+	function hide()  //去除隐藏层和弹出层
+	{
+	   document.getElementById("hidebg").style.display="none";
+	   document.getElementById("hidebox").style.display="none";
+	}
+	</script>
+	<style>
+	   body { margin:0px;padding:0px;text-align: center;}
+	   #hidebg { position:absolute;left:0px;top:0px;
+	      background-color:#000;
+	      width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+	      filter:alpha(opacity=60);  /*设置透明度为60%*/
+	      opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+	      display:none; /* http://www.jb51.net */
+	      height: 800px;
+	      z-Index:2;}
+	   #hidebox { position:absolute;width:400px;height:auto;top:200px;left:30%;background-color:#fff;display:none;cursor:pointer;z-Index:3;}
+	   #content { text-align:center;cursor:pointer;z-Index:1;}
+	</style>
+	</head>
+	<body>
+	<div id="hidebg" style="height: 800px; width: 100%;"></div>
+	<div id="hidebox" onClick="hide();">
+		<img style="width: auto; height: 200px;" src="pic.png">
+		<div>
+			<p>恭喜您,获得免费咨询↓↓↓的资格！</p>
+			<p>祛斑导师微信</p>
+			<p></p>
+			<p>★长按复制加微信★</p>
+			<p>还可免费领取价值198元祛斑大礼包</p>
+			<p style="color: red;">（仅限50名）</p>
+
+									<div class="modal-body">
+									  <h4 style="margin: auto;line-height: 150%;">恭喜您,获得免费咨询<span style="color: red; font-size: 20px; font-weight: bold;">↓↓↓</span>的资格！</h4>
+			                          <h4 style="margin: auto;line-height: 250%;"><span style="color: red; font-size: 20px; font-weight: bold;">祛斑导师佳佳</span></h4>
+									  <h4 style="margin: auto;line-height: 200%;"> <font style="color:#f74545;font-weight:bold;font-size:1.2em;" id="tz"><span class="btn" data-clipboard-target="#foo12" style="border: none; background:#F8F8F8 "><input id="foo12" value=""  style="border: 0px; background: #F8F8F8;   width: 88px; color: red; font-weight: bolder; font-size: 18px;"><script type="text/javascript">
+							            document.getElementById("foo12").value = wechat_num;
+							          </script></span>（点击复制）</span></font>						  </h4>
+									  <h4 style="margin: auto;">
+										  ★点击复制加微信★</h4>
+
+									<h4 style="margin: auto;">还可免费领取价值<span style="color: red; font-size: 20px; font-weight: bold;">198元</span>祛斑大礼包
+									  </h4>
+									  <h4 style="margin: auto;"><a href="weixin://"></a><span style="color: red; font-size: 20px; font-weight: bold;"></span>
+									  </h4>
+									  <h4 style="margin: auto;">（<span style="color: red; font-size: 20px; font-weight: bold;">仅限50名</span>）
+									  </h4>
+									                </div>
+
+</div>
+
+	</div>
+	<div id="content" onClick="show();">点击试试</div>
+	
+
+</body>
+</html>

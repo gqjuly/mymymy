@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表单事件onfocus</title>
+	<style type="text/css">
+	*{
+
+		font-family:微软雅黑;
+	}
+	</style>
+</head>
+<body>
+	<form>
+		<p>用户名</p>
+		<input type="text" name="" id="nameid" value="haha">
+		<p>密码</p>
+		<input type="text" name="">
+		<br><br>
+		<button>提交</button>
+	</form>
+
+
+
+	<script type="text/javascript">
+		nameidObj = document.getElementById('nameid');
+		nameidObj.onfocus = function () {   //事件    我总是在事件后面添加（）
+			this.style.outlineColor = "#f00";  //outlineColor原本是outline-color  要用驼峰来写
+			// this.value = "";
+			this.select();    //方法    直接选中所有的value   
+		}
+
+	</script>
+</body>
+</html>

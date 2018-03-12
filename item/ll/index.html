@@ -9,6 +9,14 @@
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.js"></script>
 	<script type="text/javascript" src="./js/holder.js"></script>
+	<script type="text/javascript">
+		function ScreenWidth(){
+		        if ($(window).width()<720){
+		 				location.href='1234.html';
+		        }
+		    }
+		ScreenWidth();
+	</script>
 	<style type="text/css">
 	*{
 		font-family:'Consolas', "楷体";
@@ -40,16 +48,15 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">首页</a>
-	      
+	      <img src="./images/icon/plumage.ico" width="90%">
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">日记 <span class="sr-only">(current)</span></a></li>
+	        <li class="active"><a href="index.html">心情<span class="sr-only">(current)</span></a></li>
 	        <li><a href="index-images.html">照片</a></li>
-	        <li class="dropdown">
+	        <!-- <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">None <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="#">Action</a></li>
@@ -60,74 +67,95 @@
 	            <li role="separator" class="divider"></li>
 	            <li><a href="#">One more separated link</a></li>
 	          </ul>
-	        </li>
-	      </ul>
-	      
+	        </li> -->
+	      </ul>     
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Link</a></li>
+	        <li><a href="#" style="font-size: 18px; font-weight: bold;">认识了你之后 每天都有温度了</a></li>
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">None <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">默默的看&nbsp;<span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
+	            <li><a href="https://weibo.com/u/2162580514?is_hot=1">微博</a></li>
+	            <li><a href="http://music.163.com/#/user/home?id=401498277">网易云</a></li>
+	            <li><a href="http://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D%E9%98%B3%E6%B1%9F">阳江</a></li>
 	            <li role="separator" class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
+	            <li><a href="index-u-images.html">你的照片</a></li>
 	          </ul>
 	        </li>
 	      </ul>
-
-	      <form class="navbar-form navbar-right">
+	     <!--  <form class="navbar-form navbar-right">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
+	      </form> -->
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-
-
 	<div class="container">
-		<hr>
-		<h2>2018.01.08 中雨 4°~16°</h2>
-		<hr>
-		<p>感谢这一天，让我遇到你</p>
-		<p>从地铁里面，一直追到出站口。犹豫再三，最后准备放弃的时候，忽然发现你忘记带伞。我就拿了老哥的伞冲了上去，慌忙撑伞时戳伤了手。对你说第一句话的时候，很通俗。甚至连称呼都没有说，就说了一句你好。看着有点吃惊的你，我也有点局促吧！我想记住你的所有，可能我对你的中意还只是停留在穿衣风格和外表行为，或许只是冲动。也可能看起来太假，刚认识哪来的那么多感情和真心。但是我依旧相信命运和缘分，所以我一定抓住这个机会，好好的去认识你。</p>
-		<p>你154</p>
-		<p>你今年25岁</p>
-		<p>你家住在广东<span onclick="maphome()">阳江</span> </p>
-		<p>你今年毕业于<span onclick="mapUniversity()">武汉纺织大学</span> </p>
-		
-		<br>
-		<br>
-		<br>
-		<hr>
-		<h2>2018.01.09 小雨 5°~8°</h2>
-		<hr>
-		<p>你的昵称叫黑皮梁 我猜是happy梁的意思吧</p>
-		<p>今天知道了你吃辣</p>
-		<p>因为你的朋友圈签名知道你的<span onclick="musicID()">网易云音乐</span></p>
-		<p>所以也知道你的<span onclick="microBlog()">微博</span></p>
-		<p>然而我都是傻傻的看着</p>
-		
-		<br>
-		<br>
-		<br>
-		<hr>
-		<h2>2018.01.10 多云 6°~13°</h2>
-		<hr>
-		<p>昨晚想约你出来一起走走 你说你晚上出来</p>
-		<p>最后你不经意间说了句无趣</p>
-		<p>庆幸自己依旧保持着那份对待感情的激动、害羞之心</p>
-		<p>可以对着无趣两个字彷徨犹豫一晚上 焦灼一整天</p>
-		<p>希望</p>
-		<p>今天太阳出来了</p>
 
+		<hr>
+		<h2>2018.01.14 太阳 0°~0°</h2>
+		<hr>
+		<p>一个礼拜过去了</p>
+		<p>开心的一个礼拜</p>
+		<p>还有就是</p>
+		<p>其实我也不是那么喜欢体面</p>
+		<p>也不是那么喜欢林狗</p>
+		<p>也不是很喜欢所有东西</p>
+		<p>只是想和你多聊天而已</p>
+		<p>最后</p>
+		<p>衷心的谢谢你</p>
+		<p>祝福你</p>
 		<br>
 		<br>
 		<br>
+
+		
+		<hr>
+		<h2>2018.01.13 多云 5°~19°</h2>
+		<hr>
+		<p>昨天下午我约你和我一起吃晚饭</p>
+		<p>我怕你忽然答应</p>
+		<p>还四处去找理发店洗头 还担心今天忘记刮胡子被你看出来</p>
+		<p>然而都是我自己臆想出来的</p>
+		<p>在地铁上和你聊到林更新</p>
+		<p>我一直觉得你是个有趣的人 但是给我回的消息</p>
+		<p>总以为我自己喜欢上了一座冰山美人</p>
+		<p>昨晚约你今晚看电影未果后 想了很久</p>
+		<p>我是不是应该放弃 放弃也是一种选择</p>
+		<p>可能老天只是让我看清楚现在不适合谈恋爱吧</p>
+		<p>我的打算很晚才会结婚 </p>
+		<p>而我就算坚持了一年两年 怎么会坚持五年六年呢</p>
+		<p>对自己没有信心 才是最难受的事情呢</p>
+		<p>如果不能和你走一辈子 那我是有多对不起你呢</p>
+		<p>一切都不想后果和责任的我 也太任性了</p>
+		<p>还有 你昨天夸我了</p>
+		<p>你说我太天真单纯可爱活泼</p>
+		<p>我把你微博里面自拍都保存了</p>
+		<p>我保证是我自己一个人偷偷看</p>
+		<br>
+		<br>
+		<br>
+
+		
+		<hr>
+		<h2>2018.01.12 晴 5°~15°</h2>
+		<hr>
+		<p>昨晚和你聊了还蛮多 我还是依旧每次和你聊天都激动不已</p>
+		<p>聊天的时候说到 我都快忘了你的模样 你说：哈哈哈</p>
+		<p>我觉得你冷若冰山、你觉得我年轻幼稚</p>
+		<p>知道了你现在还是重心放在工作上面</p>
+		<p>我觉得我怕你 被你镇住了的感觉</p>
+		<p>希望以后能了解的更多吧</p>
+		<p>又希望你能更加了解我</p>
+		<p>想到我们都是成年人了 然而我还像个孩子一样</p>
+		<p>总是想到春娇与志明</p>
+		<br>
+		<br>
+		<br>
+
+		
 		<hr>
 		<h2>2018.01.11 多云 6°~16°</h2>
 		<hr>
@@ -137,68 +165,50 @@
 		<p>工作不忙的时候想到你的时候真的很开心</p>
 		<p>这些天总在想送给你的第一份礼物应该是个鸭舌帽</p>
 		<p>你应该很喜欢 但是一直没有机会</p>
+		<br>
+		<br>
+		<br>
 
-		<br>
-		<br>
-		<br>
-		<hr>
-		<h2>2018.01.10 多云 6°~13°</h2>
-		<hr>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-
-		<br>
-		<br>
-		<br>
-		<hr>
-		<h2>2018.01.10 多云 6°~13°</h2>
-		<hr>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-
-		<br>
-		<br>
-		<br>
-		<hr>
-		<h2>2018.01.10 多云 6°~13°</h2>
-		<hr>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-
-		<br>
-		<br>
-		<br>
-		<hr>
-		<h2>2018.01.10 多云 6°~13°</h2>
-		<hr>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
 		
-		<br>
-		<br>
-		<br>
 		<hr>
 		<h2>2018.01.10 多云 6°~13°</h2>
 		<hr>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		
+		<p>昨晚想约你出来一起走走 你说你晚上出来</p>
+		<p>最后你不经意间说了句无趣</p>
+		<p>庆幸自己依旧保持着那份对待感情的激动、害羞之心</p>
+		<p>可以对着无趣两个字彷徨犹豫一晚上 焦灼一整天</p>
+		<p>希望</p>
+		<p>今天太阳出来了</p>
+		<br>
+		<br>
+		<br>
 
+		
+		<hr>
+		<h2>2018.01.09 小雨 5°~8°</h2>
+		<hr>
+		<p>你的昵称叫黑皮梁 我猜是happy梁的意思吧</p>
+		<p>今天知道了你吃辣</p>
+		<p>因为你的朋友圈签名知道你的<span onclick="musicID()">网易云音乐</span></p>
+		<p>所以也知道你的<span onclick="microBlog()">微博</span></p>
+		<p>然而我都是傻傻的看着</p>
+		<br>
+		<br>
+		<br>
+
+		
+		<hr>
+		<h2>2018.01.08 中雨 4°~16°</h2>
+		<hr>
+		<p>感谢这一天，让我遇到你</p>
+		<p>从地铁里面，一直追到出站口。犹豫再三，最后准备放弃的时候，忽然发现你忘记带伞。我就拿了老哥的伞冲了上去，慌忙撑伞时戳伤了手。对你说第一句话的时候，很通俗。甚至连称呼都没有说，就说了一句你好。看着有点吃惊的你，我也有点局促吧！我想记住你的所有，可能我对你的中意还只是停留在穿衣风格和外表行为，或许只是冲动。也可能看起来太假，刚认识哪来的那么多感情和真心。但是我依旧相信命运和缘分，所以我一定抓住这个机会，好好的去认识你。</p>
+		<p>你154</p>
+		<p>你今年25岁</p>
+		<p>你家住在广东<span onclick="maphome()">阳江</span> </p>
+		<p>你今年毕业于<span onclick="mapUniversity()">武汉纺织大学</span> </p>
+		<br>
+		<br>
+		<br>
 		
 	</div>
 	<script type="text/javascript">
@@ -211,7 +221,7 @@
 		function musicID(){
 			window.open("http://music.163.com/#/user/home?id=401498277");
 		}
-		function musicID(){
+		function microBlog(){
 			window.open("https://weibo.com/u/2162580514?is_hot=1");
 		}
 		

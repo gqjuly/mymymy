@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>预览模式</title>
+	<style type="text/css">
+		.main{
+			width: 900px;
+			margin: 0 auto;
+		}
+		.one{
+			padding: 15px;
+			border: 1px dashed #000;
+			border-radius: 10px;
+			float: left;
+			width: 410px;
+			/*background: #f00;*/
+		}
+		.two{
+			padding: 15px;
+			border: 1px dashed #000;
+			border-radius: 10px;
+
+
+			float: right;
+			width: 410px;
+			/*background: #ff0;*/
+		}
+		
+
+	</style>
+</head>
+<body>
+
+	<div class="main">
+		<div class="one ">
+				<form>
+				<p >用户名：</p>
+				<p id="name1">&nbsp</p>
+				<p>密码：</p>
+				<p>留言：</p>
+					
+				</form>
+				
+		</div>
+		<div class="two ">
+			<form>
+			<p>用户名：</p>
+			<input type="text" id="name2">
+			<p>密码：</p>
+			<input type="text" name="">
+			<p>留言：</p>
+			<textarea placeholder="Your Message To Us" style="width: 100%; height: 200px;"></textarea>
+				
+			</form>
+				
+		</div>
+
+	</div>
+
+
+<script type="text/javascript">
+	name1obj = document.getElementById('name1');
+	document.getElementById('name2').onkeyup = function () {
+		// alert("1");
+		name1obj.innerHTML = this.value;;
+	}
+	
+</script>
+	
+
+</body>
+</html>

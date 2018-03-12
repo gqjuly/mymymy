@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>抽奖</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<div>
+	<button class="btn" id="btnid">点击开始</button>
+	<span class="sp" id="sid"></span>
+</div>
+
+
+<script type="text/javascript">
+var btnobj = document.getElementById('btnid');
+	
+	btnobj.onclick =  function(){
+		var yu = ['小王', '小李', '小飞', '小红', '小绿'];
+		var x = Math.floor(Math.random()*5);
+		document.getElementById('sid').innerHTML = yu[x];
+	};
+	btnobj.click();
+</script>
+
+</body>
+</html>

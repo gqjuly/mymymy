@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js函数</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="tanchuang('liuyue', 'jiujiang')">liuyue</button>
+	<button onclick="tanchuang('yuan', 'nanjing')">liuyuan</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function tanchuang(name, from){
+			alert('hello  ' + name + "你来自" + from + "?");
+
+		}
+
+		//关于函数中return的使用方法
+		function fucReturn(a,b){
+			if (a<b) {
+				return 0;
+			}
+
+			return a*b;
+		}
+		document.getElementById("demo").innerHTML = fucReturn(4,3);
+
+	</script>
+</body>
+</html>

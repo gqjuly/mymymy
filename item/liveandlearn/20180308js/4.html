@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript对象创建的两种方法</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var person = {
+					first:'liu',
+					lastname:'yue',
+					old:18,
+					dowhat: function(){}
+					}
+		document.write(person.lastname+'<br>');
+		document.write(person["lastname"]+'<br>');
+
+		//先创建对象再追加属性和方法
+		var person1 = new Object();
+		person1.first = 'liu';
+		person1.lastname = 'yue';
+		person1.old = 18;
+		person1.dowhat = function(){};
+
+		document.write(person1.lastname + '<br>');
+		document.write(person1['lastname']+ '<br>')
+	</script>
+
+</body>
+</html>

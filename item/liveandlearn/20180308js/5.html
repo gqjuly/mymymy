@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js对象</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#demo{
+			color: #ff0000;
+		}
+	</style>
+</head>
+<body>
+	<p>js对象</p>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<script type="text/javascript">
+		// var person1 = {
+		// 			name:"haha",
+		// 			home:"GuangZhou",
+		// 			age:18,
+		// 			action:function(){
+						
+		// 			}
+		// }
+
+		// document.getElementById('demo').innerHTML = person1.name + '的年龄是' + person1.age;
+
+
+
+		var person2 = {
+					name:"haha",
+					home:"GuangZhou",
+					age:18,
+					action : function(){
+						return this.name + '  '+
+						 this.home;
+					}
+		}
+		document.getElementById('demo2').innerHTML = person2.action();
+
+
+	</script>
+
+
+	<script>
+	var person = {
+	    firstName: "John",
+	    lastName : "Doe",
+	    id : 5566,
+	    fullName : function() 
+		{
+	       return this.firstName + " " + this.lastName +this.id;
+	    }
+	};
+	document.getElementById("demo").innerHTML = person.fullName();
+	</script>
+
+</body>
+</html>

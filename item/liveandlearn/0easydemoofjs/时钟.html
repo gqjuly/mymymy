@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>时钟</title>
+	<style type="text/css">
+		.clock{
+			width: 200px;
+			height: 50px;
+			background: black;
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			line-height: 50px;
+			font-size: 30px;
+			border-radius: 5px;
+
+		}
+	</style>
+</head>
+<body>
+
+<p class="clock" id="cid"> 12:06:43</p>
+
+<script type="text/javascript">
+function addclick(){
+	var clobj = new Date();
+	var h = clobj.getHours();
+	var m =clobj.getMinutes();
+	if (m<10) {
+		m = "0" + m;
+	}
+	var s = clobj.getSeconds();
+	if (s<10) {
+		s = "0" + s;
+	}
+	var timeobj = document.getElementById('cid');
+	timeobj.innerHTML = h + ":" + m + ":" + s;
+}
+addclick();
+
+setInterval(function(){addclick()}, 1000);
+</script>
+
+</body>
+</html>
