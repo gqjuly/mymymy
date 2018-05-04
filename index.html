@@ -3,11 +3,13 @@
 <head>
 	<title>snow7yue</title>
 	<link rel = "Shortcut Icon" href="./images/icon/favicon.ico">
+	<meta charset="utf-8">
+	<script type="text/javascript" src="./js/jquery.js"></script>
 	<style type="text/css">
 		body{
 			padding: 25px;
-			margin-left: 250px;
-			margin-right: 250px;
+			margin-left: 25px;
+			margin-right: 25px;
 		}
 		a{
 			margin-right: 10px;
@@ -19,14 +21,15 @@
 		#demo,#my{
 			display: none;
 			position: absolute;
-			top: 115px;
-			left: 360px;
+			top: 120px;
+			left: 115px;
 
 		}
 		#menu{
 			height: auto;
 			width: auto;
 			background: #f0f0f0;
+			align-content: center;
 		}
 	
 	</style>
@@ -39,51 +42,75 @@
 	<h2>首页</h2>
 	<hr>
 	<div id="menu">
-		<div><button onclick="demoClick()">DEMO</button></div>
+		<div><button onclick="showHideClick()">DEMO</button></div>
 		<div><button onclick="myClick()">MY</button></div>
 	</div>
 	
 	<div id="demo">
-		<a href="./item/bootstrap/index.html">Bootstrap</a>
-		<a href="./item/JQueryUI/index.html">jquery插件库</a>
-		<a href="./item/effects/01/index.html">特效</a>
-		<a href="./item/music/index.html">来首歌吧</a>
+		<a class="dmeo_1" href="#">Bootstrap</a>
+		<a class="dmeo_2" href="#">jquery插件库</a>
+		<a class="dmeo_3" href="#">特效</a>
+		<a class="dmeo_4" href="#">来首歌吧</a>
 	</div>
 
 	<div id="my">
-		<a href="./item/knowledge/index.html">学习博客</a>
-		<a href="./item/ll/index.html">关于你</a>
-		<a href="./item/aboutmyself/index.html">关于我</a>
+		<a class="my_1" href="#">学习博客</a>
+		<a class="my_2" href="#">关于你</a>
+		<a class="my_3" href="#">关于我</a>
 	</div>
 	
 	
 
 	<script type="text/javascript">
-		demoObj = document.getElementById('demo');
-		myObj = document.getElementById('my');	
-		function demoClick() {
+		//点击显示与隐藏
+		// demoObj = document.getElementById('demo');
 		
-		if (demoObj.style.display=='inline') {
-			demoObj.style.display= 'none';
-		}else{
-			demoObj.style.display= 'inline';
-		}
-		myObj.style.display= 'none'
 
-
-		;
+		function showHideClick(demoObj) {
+			if (demoObj.style.display=='inline') {
+				demoObj.style.display= 'none';
+			}else{
+				demoObj.style.display= 'inline';
+			}
+			myObj.style.display= 'none';	
 		};
+
+		
 
 		function myClick() {
-		
-		if (myObj.style.display=='inline') {
-			myObj.style.display= 'none';
-		}else{
-			myObj.style.display= 'inline';
-		}
-
-		demoObj.style.display= 'none';
+			myObj = document.getElementById('my');
+			console.log('myclick');
+			showHideClick(myObj);
+			console.log('myObj');
+			
 		};
+
+		//打开新链接
+		//demo
+		$('.dmeo_1').click(function() {
+			window.open('./item/bootstrap/index.html');
+		});
+		$('.dmeo_2').click(function() {
+			window.open('./item/JQueryUI/index.html');
+		});
+		$('.dmeo_3').click(function() {
+			window.open('./item/effects/01/index.html');
+		});
+		$('.dmeo_4').click(function() {
+			window.open('./item/music/index.html');
+		});
+
+		//my
+		$('.my_1').click(function() {
+			window.open('./item/knowledge/index.html');
+		});
+		$('.my_2').click(function() {
+			window.open('./item/ll/index.html');
+		});
+		$('.my_3').click(function() {
+			window.open('./item/aboutmyself/index.html');
+		});
+
 
 	</script>
 	
